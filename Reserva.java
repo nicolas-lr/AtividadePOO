@@ -1,13 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Nicolas
- */
-public class Reserva {
+// @author Nicolas
+public class Reserva{
+//atributos
+    private String cliente;
+    private String periodoEstadia;
+    private Quarto quarto;
+    public Reserva(String cliente, String periodoEstadia, Quarto quarto) {
+        this.cliente = cliente;
+        this.periodoEstadia = periodoEstadia;
+        this.quarto = quarto;
+        }
+    public String getCliente() {
+        return cliente;
+        }
     
-}
+    public String getPeriodoEstadia() {
+        return periodoEstadia;
+        }
+    
+    public Quarto getQuarto() {
+        return quarto;
+        }
+    
+    public double calcularPrecoTotal() {
+        quarto.getPrecoBase() + quarto.getCamasCasal() + quarto.getCamasSolteiro()
+        return quarto.getPrecoBase();
+        }   
+    }
+
+
+
+

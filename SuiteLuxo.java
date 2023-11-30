@@ -1,13 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Nicolas
- */
-public class SuiteLuxo {
-    
+public class SuiteLuxo extends Quarto {
+    public SuiteLuxo(){
+        super ("Luxo", 400.0, 0, 0, 6);
+    }
 }
