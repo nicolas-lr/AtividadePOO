@@ -1,19 +1,37 @@
-// @author Nicolas
-public class Reserva{
+﻿public class Reserva{
 //atributos
     private String cliente;
-    private String periodoEstadia;
+    private int periodoEstadia;
     private Quarto quarto;
-    public Reserva(String cliente, String periodoEstadia, Quarto quarto) {
+    private double valorTotal;
+    
+//construtor para objetos da classe Reserva
+    public Reserva(String cliente, int periodoEstadia, Quarto quarto, double valorTotal) {
         this.cliente = cliente;
         this.periodoEstadia = periodoEstadia;
         this.quarto = quarto;
+        this.valorTotal = valorTotal;
         }
+    //método para fazer o calculo do valor total a ser pago
+    public double CalcularTotal(int PeriodoEstadia, double valorBase , double valorTotal){
+       this.valorTotal = quarto.getPrecoBase() * periodoEstadia;
+       return valorTotal;
+    }
+    //método que exibe as informações da reserva
+     public void exibirDetalhes(Reserva reserva) {
+        System.out.println("Cliente: " + reserva.getCliente());
+        System.out.println("Período de Estadia: " + reserva.getPeriodoEstadia());
+        System.out.println("Tipo de Quarto: " + reserva.getQuarto().getTipo());
+        reserva.CalcularTotal(periodoEstadia, valorTotal, valorTotal);
+        System.out.println("Preço Total: " + reserva.getValorTotal()) ; 
+        }
+    
+    //Métodos Getters e Setters da classe
     public String getCliente() {
         return cliente;
         }
     
-    public String getPeriodoEstadia() {
+    public int getPeriodoEstadia() {
         return periodoEstadia;
         }
     
@@ -21,12 +39,12 @@ public class Reserva{
         return quarto;
         }
     
-    public double calcularPrecoTotal() {
-        quarto.getPrecoBase() + quarto.getCamasCasal() + quarto.getCamasSolteiro()
-        return quarto.getPrecoBase();
-        }   
+    public double getValorTotal() {
+        return valorTotal;
     }
 
-
-
-
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+    
+}

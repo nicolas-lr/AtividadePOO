@@ -1,5 +1,5 @@
 public class SuiteLuxo extends Quarto {
     public SuiteLuxo(){
-        super ("Luxo", 400.0, 0, 0, 6);
+        super ("Suite de luxo", 300.0);
     }
 }
